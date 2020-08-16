@@ -1,0 +1,13 @@
+version: "3"
+services:
+    spideroptic:
+        image: "spideroptic:dev"
+        build:
+            context: .
+            dockerfile: Dockerfile
+        hostname: spideroptic
+        stdin_open: true
+        tty: true
+        working_dir: '/spideroptic-dev'
+        volumes:
+            - ".:/spideroptic-dev"
